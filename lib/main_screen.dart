@@ -131,7 +131,7 @@ class _MainScreenState extends State<MainScreen> {
                       ],
                     ),
                   ),
-                  _buildBotttomNavBar(),
+                  _buildBottomNavBar(),
                 ],
               )),
         ),
@@ -184,7 +184,7 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget _buildBotttomNavBar() {
+  Widget _buildBottomNavBar() {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
