@@ -282,6 +282,15 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget _buildProduct(ProductModel data) {
     return InkWell(
+      onTap: () => Navigator.push(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) => DetailsScreen(),
+          transitionDuration: Duration(seconds: 1),
+          transitionsBuilder: (_, a, __, c) =>
+              FadeTransition(opacity: a, child: c),
+        ),
+      ),
       child: CustomPaint(
         painter: CurvePainter(),
         child: Container(
