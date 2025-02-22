@@ -6,6 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:statistique_progress/colors/colors.dart';
 import 'package:statistique_progress/colors/dimensions.dart';
 
+import 'checkout_screen.dart';
+
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
 
@@ -222,6 +224,15 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             color: Color(0xff3D9CEA)),
                       ),
                       InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (_, __, ___) => CheckoutScreen(),
+                            transitionDuration: Duration(seconds: 1),
+                            transitionsBuilder: (_, a, __, c) =>
+                                FadeTransition(opacity: a, child: c),
+                          ),
+                        ),
                         child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: 38, vertical: 11),
